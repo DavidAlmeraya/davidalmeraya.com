@@ -1,0 +1,6 @@
+Replace this file with your actual resume PDF.
+
+Rename or add your PDF as: resume.pdf
+So the path is: public/resume.pdf
+
+The "Download Resume (PDF)" button links to /resume.pdf.

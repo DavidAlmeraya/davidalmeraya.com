@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-accent: 168 72% 42%;
+  --color-accent-muted: 168 58% 35%;
+  --color-surface: 220 18% 8%;
+  --color-surface-elevated: 220 16% 12%;
+  --color-text: 220 14% 96%;
+  --color-text-muted: 220 10% 65%;
+  --color-border: 220 14% 20%;
+}
+
+.light {
+  --color-surface: 0 0% 99%;
+  --color-surface-elevated: 0 0% 97%;
+  --color-text: 220 20% 12%;
+  --color-text-muted: 220 10% 40%;
+  --color-border: 220 14% 88%;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply antialiased;
+    background-color: hsl(var(--color-surface));
+    color: hsl(var(--color-text));
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+.hero-bg-subtle {
+  background-color: hsl(var(--color-surface));
+}
+
+/* Print */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: #111;
+  }
+}
