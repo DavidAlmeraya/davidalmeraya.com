@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   description:
-    "Senior Full-Stack Engineer. Scalable systems, full-stack product engineering, data acquisition, and fintech. Mexico City.",
+    "Senior Full-Stack Engineer open to new opportunities. Scalable systems, full-stack product engineering, data acquisition, and fintech. Mexico City.",
   keywords: [
     "full-stack engineer",
     "fintech",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "David Herrera Almeraya | Senior Full-Stack Engineer",
     description:
-      "Scalable systems, full-stack product engineering, data & automation, e-commerce & fintech.",
+      "Senior Full-Stack Engineer open to new opportunities. Scalable systems, full-stack product engineering, data & automation, e-commerce & fintech.",
     type: "website",
   },
   twitter: {

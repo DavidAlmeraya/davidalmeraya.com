@@ -73,6 +73,16 @@ export function Hero() {
             {hero.taglineShort}
           </motion.p>
         )}
+        {hero.openToRoles && (
+          <motion.p
+            className="mt-2 text-sm font-medium text-[hsl(var(--color-text))]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >
+            {hero.openToRoles}
+          </motion.p>
+        )}
         <motion.div
           className="mt-6 flex flex-wrap items-center justify-center md:justify-start gap-3"
           initial={{ opacity: 0, y: 16 }}

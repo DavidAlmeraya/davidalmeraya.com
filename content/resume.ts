@@ -18,6 +18,7 @@ export interface ResumeHero {
   title: string;
   tagline: string;
   taglineShort?: string;
+  openToRoles?: string;
 }
 
 export interface ResumeAbout {
@@ -96,6 +97,8 @@ const resumeEn: ResumeData = {
       "I design and scale high-performance financial and data-driven platforms—from secure distributed backends to real-time dashboards. Focused on scalable systems, full-stack product engineering, and robust data acquisition.",
     taglineShort:
       "Scalable systems · Full-stack · Data & automation · E-commerce & fintech",
+    openToRoles:
+      "Open to new opportunities (only remote).",
   },
   about: {
     paragraph:
@@ -188,8 +191,8 @@ const resumeEn: ResumeData = {
       approach:
         "Participated in migration to microservices; built backend services for loan lifecycle and account tracking with .NET Core. Implemented WebSockets for real-time notifications. Designed modular Angular components for internal analytics. Applied TDD to critical workflows.",
       result:
-        "Improved system throughput via database indexing and modular frontends (placeholder: exact % to be confirmed).",
-      resultPlaceholder: true,
+        "Improved system throughput and delivery speed via database indexing and modular frontends; supported migration to microservices.",
+      resultPlaceholder: false,
     },
   ],
   experience: [
@@ -314,6 +317,8 @@ const resumeEs: Partial<ResumeData> = {
       "Diseño y escalo plataformas financieras y basadas en datos de alto rendimiento—desde backends distribuidos seguros hasta dashboards en tiempo real. Enfocado en sistemas escalables, ingeniería full-stack y adquisición robusta de datos.",
     taglineShort:
       "Sistemas escalables · Full-stack · Datos y automatización · E-commerce y fintech",
+    openToRoles:
+      "Abierto a nuevas oportunidades (solo remoto).",
   },
   about: {
     ...resumeEn.about,
@@ -406,8 +411,8 @@ const resumeEs: Partial<ResumeData> = {
       approach:
         "Participé en la migración a microservicios; construí servicios backend para ciclo de vida de créditos y seguimiento de cuentas con .NET Core. Implementé WebSockets para notificaciones en tiempo real. Diseñé componentes modulares en Angular para analíticas internas. Apliqué TDD a flujos críticos.",
       result:
-        "Mejoré el throughput del sistema mediante indexación de base de datos y frontends modulares (placeholder: % exacto por confirmar).",
-      resultPlaceholder: true,
+        "Mejoré el throughput y la velocidad de entrega mediante indexación de base de datos y frontends modulares; apoyé la migración a microservicios.",
+      resultPlaceholder: false,
     },
   ],
   experience: [
@@ -528,7 +533,7 @@ const dictEn: Record<string, string> = {
   "projects.title": "Projects",
   "writing.title": "Writing",
   "contact.title": "Contact",
-  "contact.subtitle": "I usually respond within 24 hours.",
+  "contact.subtitle": "I usually respond within 24 hours, including for new opportunities.",
   "contact.name": "Name",
   "contact.email": "Email",
   "contact.message": "Message",
@@ -568,7 +573,7 @@ const dictEs: Record<string, string> = {
   "projects.title": "Proyectos",
   "writing.title": "Blog",
   "contact.title": "Contacto",
-  "contact.subtitle": "Suelo responder en menos de 24 horas.",
+  "contact.subtitle": "Suelo responder en menos de 24 horas, también para nuevas oportunidades.",
   "contact.name": "Nombre",
   "contact.email": "Correo",
   "contact.message": "Mensaje",
