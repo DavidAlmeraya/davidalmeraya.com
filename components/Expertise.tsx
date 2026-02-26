@@ -30,7 +30,7 @@ function PillarCard({
         <h3 className="text-lg font-semibold text-[hsl(var(--color-text))]">{pillar.title}</h3>
         <p className="mt-1 text-sm text-[hsl(var(--color-text-muted))]">{pillar.summary}</p>
         <span className="mt-2 inline-block text-sm font-medium text-accent" aria-hidden>
-          {isExpanded ? "− Less" : "+ More"}
+          {isExpanded ? t("expertise.less", locale) : t("expertise.more", locale)}
         </span>
       </button>
       <AnimatePresence initial={false}>

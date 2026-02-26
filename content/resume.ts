@@ -318,8 +318,187 @@ const resumeEs: Partial<ResumeData> = {
   about: {
     ...resumeEn.about,
     paragraph:
-      "Ingeniero Full-Stack Senior con más de 13 años diseñando y escalando plataformas financieras y basadas en datos. Especializado en sistemas backend seguros y distribuidos con C#, .NET Core y Node.js, y frontends modernos en Angular, React y TypeScript.",
+      "Soy Ingeniero Full-Stack Senior con más de 13 años de experiencia.\n\nMi trayectoria está en plataformas financieras y basadas en datos de alto rendimiento, donde la consistencia, la fiabilidad y la reconciliación no son opcionales — son fundamentales. Me especializo en construir sistemas backend seguros y distribuidos con C#, .NET Core y Node.js, junto con frontends modernos en Angular, React y TypeScript.\n\nA lo largo de los años he trabajado mucho con arquitecturas de microservicios, procesamiento de transacciones de alto volumen e infraestructura cloud-native en AWS. Mi enfoque es siempre el mismo: arquitectura limpia, rendimiento bajo presión y sistemas que sigan siendo fiables a escala.\n\nMás allá del código, valoro la claridad y la responsabilidad. He liderado equipos remotos y multifuncionales, contribuido a objetivos de 99.9% de disponibilidad e implementado pipelines CI/CD que reducen el riesgo en lugar de añadir complejidad.\n\nCreo que la buena ingeniería no es solo construir rápido — es construir sistemas en los que puedas confiar.",
   },
+  expertise: [
+    {
+      id: "scalable-systems",
+      title: "Sistemas escalables y fiabilidad fintech",
+      summary: "Backends de alta disponibilidad y sistemas de transacciones con consistencia estricta.",
+      tools: [".NET Core", "PostgreSQL", "Redis", "AWS (EC2, Lambda, API Gateway)", "Docker", "Kubernetes"],
+      patterns: ["Microservicios", "Event-driven", "REST APIs", "Idempotencia", "Flujos de reconciliación"],
+      outcomes: [
+        "Más de 1M de transacciones diarias con controles de consistencia estrictos.",
+        "99.9% de disponibilidad en sistemas de producción.",
+        "30% de reducción en errores de reconciliación mediante optimización de validación.",
+      ],
+    },
+    {
+      id: "data-acquisition",
+      title: "Adquisición de datos y automatización (scraping)",
+      summary: "Pipelines de datos éticos y robustos y automatización a escala.",
+      tools: ["Node.js", "Python", "Redis", "S3", "Tareas programadas"],
+      patterns: ["Rate limiting", "Reintentos y backoff", "Almacenamiento estructurado", "Ingesta idempotente"],
+      outcomes: [
+        "Pipelines de ingesta fiables con mínimo procesamiento duplicado.",
+        "Resilientes a cambios de proveedores y fallos transitorios.",
+      ],
+    },
+    {
+      id: "fullstack",
+      title: "Ingeniería full-stack de producto",
+      summary: "Responsabilidad de punta a punta desde diseño de API hasta UIs pulidas.",
+      tools: ["Angular", "React", "TypeScript", "C#", ".NET Core", "Node.js", "Express"],
+      patterns: ["Estado reactivo", "Arquitectura de componentes", "REST y WebSockets", "TDD"],
+      outcomes: [
+        "Dashboards financieros y herramientas admin en tiempo real.",
+        "Más del 85% de cobertura de tests automatizados en rutas críticas.",
+        "Mejoras del 35–40% en latencia y tiempo de despliegue.",
+      ],
+    },
+    {
+      id: "commerce",
+      title: "Plataformas de comercio y transacciones",
+      summary: "POS, e-commerce y procesamiento de pagos con integraciones bancarias.",
+      tools: ["C#", ".NET Core", "SQL Server", "Redis", "Docker", "Kubernetes"],
+      patterns: ["Pasarelas de pago", "Transacciones multicanal", "Caché", "Diseño PCI-aware"],
+      outcomes: [
+        "Módulos de pago seguros para POS y e-commerce.",
+        "Integraciones con APIs bancarias mexicanas y sistemas multicanal.",
+        "Checkout e informes más rápidos mediante optimización de consultas y caché.",
+      ],
+    },
+  ],
+  caseStudies: [
+    {
+      id: "soldo",
+      title: "Soldo — Backend fintech de alto volumen",
+      problem:
+        "Procesar más de 1M de transacciones financieras diarias con consistencia estricta, auditoría y alta disponibilidad para un fintech europeo.",
+      constraints:
+        "Equipo remoto, requisitos regulatorios, tolerancia cero a transacciones duplicadas o perdidas.",
+      approach:
+        "Arquitectura de microservicios en .NET Core y PostgreSQL con claves de idempotencia, validación event-driven y flujos de reconciliación. Dashboards en tiempo real en Angular con estado reactivo. Despliegue en AWS (EC2, Lambda, API Gateway) con GitHub Actions y Docker.",
+      result:
+        "30% de reducción en errores de reconciliación; 40% despliegues más rápidos; 99.9% disponibilidad. Lideré revisiones de arquitectura y mentoría a ingenieros mid-level.",
+      resultPlaceholder: false,
+    },
+    {
+      id: "clip",
+      title: "Clip — Rendimiento de plataforma de pagos",
+      problem:
+        "Las APIs de pago y e-commerce necesitaban menor latencia y mayor fiabilidad para comercios y dashboards internos.",
+      constraints:
+        "Uso de SQL Server legacy, mantener compatibilidad hacia atrás mientras se mejora el rendimiento.",
+      approach:
+        "Optimicé consultas SQL Server, introduje caché Redis y containericé servicios con Docker para Kubernetes. Aumenté la cobertura de tests con xUnit y Jest. Integré APIs bancarias mexicanas y pasarelas de pago para flujos multicanal.",
+      result:
+        "35% de reducción de latencia en APIs; 85% de cobertura de tests automatizados; despliegue escalable en Kubernetes.",
+      resultPlaceholder: false,
+    },
+    {
+      id: "konfio",
+      title: "Konfío — Escalabilidad de plataforma de crédito",
+      problem:
+        "Sistema monolítico limitaba la escalabilidad y la velocidad de entrega para ciclo de vida de créditos y analíticas.",
+      constraints:
+        "Flujos financieros de misión crítica que requieren alta fiabilidad y trazas de auditoría claras.",
+      approach:
+        "Participé en la migración a microservicios; construí servicios backend para ciclo de vida de créditos y seguimiento de cuentas con .NET Core. Implementé WebSockets para notificaciones en tiempo real. Diseñé componentes modulares en Angular para analíticas internas. Apliqué TDD a flujos críticos.",
+      result:
+        "Mejoré el throughput del sistema mediante indexación de base de datos y frontends modulares (placeholder: % exacto por confirmar).",
+      resultPlaceholder: true,
+    },
+  ],
+  experience: [
+    {
+      company: "Soldo",
+      role: "Ingeniero Full-Stack Senior",
+      location: "Remoto, Europa",
+      start: "Feb 2023",
+      end: "Dic 2025",
+      bullets: [
+        "Arquitecturé sistemas backend financieros basados en microservicios con .NET Core y PostgreSQL.",
+        "Diseñé REST APIs de alta disponibilidad procesando más de 1M de transacciones diarias con controles de consistencia estrictos.",
+        "Construí dashboards financieros en tiempo real con Angular y gestión de estado reactivo.",
+        "Reduje errores de reconciliación un 30% optimizando flujos de validación de transacciones.",
+        "Implementé pipelines CI/CD con GitHub Actions y Docker, reduciendo el tiempo de despliegue un 40%.",
+        "Desplegué infraestructura escalable en AWS (EC2, Lambda, API Gateway) con 99.9% de disponibilidad.",
+        "Lideré revisiones de arquitectura y mentoría a ingenieros mid-level.",
+      ],
+    },
+    {
+      company: "Clip",
+      role: "Ingeniero Full-Stack",
+      location: "Ciudad de México, remoto",
+      start: "Abr 2020",
+      end: "Ene 2023",
+      bullets: [
+        "Desarrollé módulos seguros de procesamiento de pagos POS y e-commerce con C# y .NET Core.",
+        "Integré APIs bancarias mexicanas y pasarelas de pago para sistemas de transacciones multicanal.",
+        "Optimicé consultas SQL Server e implementé caché Redis, reduciendo la latencia de APIs un 35%.",
+        "Construí dashboards administrativos con Angular y TypeScript para monitoreo financiero.",
+        "Containericé aplicaciones con Docker y desplegué en clústeres Kubernetes.",
+        "Aumenté la cobertura de tests automatizados al 85% con xUnit y Jest.",
+        "Colaboré con equipos de producto, riesgo y cumplimiento en entorno Agile.",
+      ],
+    },
+    {
+      company: "Konfío",
+      role: "Ingeniero de Software Senior / Ingeniero de Software",
+      location: "Ciudad de México",
+      start: "Ene 2017",
+      end: "Mar 2020",
+      bullets: [
+        "Construí servicios backend para gestión del ciclo de vida de créditos y seguimiento de cuentas con .NET Core.",
+        "Implementé sistemas de notificación en tiempo real con WebSockets.",
+        "Participé en la migración de arquitectura monolítica a microservicios, mejorando la escalabilidad.",
+        "Diseñé componentes modulares en Angular para herramientas internas de analíticas financieras.",
+        "Mejoré el throughput del sistema optimizando estrategias de indexación en base de datos.",
+        "Apliqué prácticas TDD en flujos financieros de misión crítica.",
+      ],
+    },
+    {
+      company: "Kueski",
+      role: "Ingeniero de Software",
+      location: "Guadalajara, México",
+      start: "Ene 2010",
+      end: "Dic 2016",
+      bullets: [
+        "Desarrollé APIs RESTful con Node.js y Express para procesamiento de solicitudes de crédito.",
+        "Construí dashboards internos con React para reportes y monitoreo de rendimiento.",
+        "Colaboré en la configuración de pipelines CI/CD con Git y Jenkins.",
+        "Mejoré el rendimiento de reportes mediante optimización de consultas y estrategias de caché.",
+        "Di soporte a servicios backend escalables manejando grandes volúmenes de datos de clientes.",
+      ],
+    },
+  ],
+  projects: [
+    {
+      id: "fintech-dashboards",
+      title: "Dashboards financieros en tiempo real",
+      description: "Dashboards basados en Angular con estado reactivo para monitoreo de transacciones y reconciliación.",
+      tags: ["Angular", "TypeScript", "RxJS", "REST"],
+      url: undefined,
+      repo: undefined,
+    },
+    {
+      id: "payment-modules",
+      title: "Módulos de pago POS y e-commerce",
+      description: "Procesamiento seguro de pagos e integraciones con pasarelas para transacciones multicanal.",
+      tags: [".NET Core", "C#", "SQL Server", "Redis"],
+      url: undefined,
+      repo: undefined,
+    },
+    {
+      id: "loan-lifecycle",
+      title: "Ciclo de vida de créditos y servicios de cuentas",
+      description: "Servicios backend para gestión de créditos, seguimiento de cuentas y notificaciones en tiempo real.",
+      tags: [".NET Core", "WebSockets", "PostgreSQL"],
+      url: undefined,
+      repo: undefined,
+    },
+  ],
 };
 
 const dictEn: Record<string, string> = {
@@ -337,6 +516,8 @@ const dictEn: Record<string, string> = {
   "expertise.tools": "Tools",
   "expertise.patterns": "Patterns",
   "expertise.outcomes": "Outcomes",
+  "expertise.less": "− Less",
+  "expertise.more": "+ More",
   "caseStudies.title": "Case Studies",
   "caseStudies.problem": "Problem",
   "caseStudies.constraints": "Constraints",
@@ -375,6 +556,8 @@ const dictEs: Record<string, string> = {
   "expertise.tools": "Herramientas",
   "expertise.patterns": "Patrones",
   "expertise.outcomes": "Resultados",
+  "expertise.less": "− Menos",
+  "expertise.more": "+ Más",
   "caseStudies.title": "Casos de estudio",
   "caseStudies.problem": "Problema",
   "caseStudies.constraints": "Restricciones",
@@ -405,6 +588,10 @@ export function getResume(locale: Locale): ResumeData {
       ...base,
       ...(resumeEs.hero && { hero: resumeEs.hero as ResumeHero }),
       ...(resumeEs.about && { about: resumeEs.about as ResumeAbout }),
+      ...(resumeEs.expertise && { expertise: resumeEs.expertise }),
+      ...(resumeEs.caseStudies && { caseStudies: resumeEs.caseStudies }),
+      ...(resumeEs.experience && { experience: resumeEs.experience }),
+      ...(resumeEs.projects && { projects: resumeEs.projects }),
     };
   }
   return base;

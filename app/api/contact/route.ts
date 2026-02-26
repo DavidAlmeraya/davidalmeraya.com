@@ -14,7 +14,8 @@ export async function POST(request: Request) {
       );
     }
 
-    const to = resume.contact.email;
+    // Resend 테스트 모드: 수신자를 본인 이메일로 제한. 도메인 인증 후 제거하면 resume.contact.email 로 발송됨.
+    const to = process.env.CONTACT_FORM_TO_EMAIL ?? resume.contact.email;
     const subject = `[Resume site] Message from ${name}`;
     const text = `From: ${name} <${email}>\n\n${message}`;
     const html = `<p><strong>From:</strong> ${name} &lt;${email}&gt;</p><pre>${message}</pre>`;
@@ -28,7 +29,9 @@ export async function POST(request: Request) {
     });
 
     if (!result.ok) {
-      return NextResponse.json({ error: result.error ?? "Send failed" }, { status: 500 });
+      const errMsg = result.error ?? "Send failed";
+      console.error("[POST /api/contact] Email send failed:", errMsg);
+      return NextResponse.json({ error: errMsg }, { status: 500 });
     }
 
     return NextResponse.json({ ok: true });

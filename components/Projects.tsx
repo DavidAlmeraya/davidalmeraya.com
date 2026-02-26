@@ -40,11 +40,11 @@ export function Projects() {
               <p className="mt-2 text-sm text-[hsl(var(--color-text-muted))]">
                 {project.description}
               </p>
-              <div className="mt-3 flex flex-wrap gap-2">
+              <div className="mt-3 flex flex-nowrap gap-1 overflow-x-auto">
                 {project.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-md bg-[hsl(var(--color-border))] px-2 py-0.5 text-xs font-medium text-[hsl(var(--color-text-muted))]"
+                    className="shrink-0 rounded bg-[hsl(var(--color-border))] px-1.5 py-px text-[10px] font-medium text-[hsl(var(--color-text-muted))]"
                   >
                     {tag}
                   </span>

@@ -10,12 +10,14 @@ export function Contact() {
   const data = getResume(locale);
   const { contact } = data;
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const fd = new FormData(form);
     setStatus("sending");
+    setErrorMessage("");
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -26,11 +28,17 @@ export function Contact() {
           message: fd.get("message"),
         }),
       });
-      if (!res.ok) throw new Error("Send failed");
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        const msg = typeof data?.error === "string" ? data.error : "Send failed";
+        setErrorMessage(msg);
+        throw new Error(msg);
+      }
       setStatus("success");
       form.reset();
-    } catch {
+    } catch (e) {
       setStatus("error");
+      console.error("Contact form error:", e);
     }
   }
 
@@ -133,7 +141,7 @@ export function Contact() {
           )}
           {status === "error" && (
             <p className="text-sm text-red-500" role="alert">
-              {t("contact.error", locale)}
+              {errorMessage || t("contact.error", locale)}
             </p>
           )}
           <button

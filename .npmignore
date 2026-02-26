@@ -1,0 +1,7 @@
+# npm pack 시 제외할 파일 (설치에는 영향 없음)
+.git
+.env*
+.next
+out
+*.log
+.DS_Store
